@@ -427,8 +427,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009615851, y: -0.007051444}
-  m_Size: {x: 0.20768599, y: 0.20768599}
+  m_Offset: {x: -0.012038315, y: -0.007051444}
+  m_Size: {x: 0.21323697, y: 0.21323697}
   m_Direction: 0
 --- !u!114 &655620311
 MonoBehaviour:
@@ -1040,7 +1040,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -1074,6 +1074,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7e418bf765cc7448be84011e7f5e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 50
+  jump: 2.5
+  foxName: "\u72D0\u72F8"
+  pass: 0
 --- !u!1 &1685565214
 GameObject:
   m_ObjectHideFlags: 0
