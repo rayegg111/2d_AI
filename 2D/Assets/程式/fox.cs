@@ -25,14 +25,35 @@ public class fox : MonoBehaviour
     //更新事件：每秒約執行60次
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D)) tra.eulerAngles = new Vector3(0, 0, 0);
-        if (Input.GetKeyDown(KeyCode.A)) tra.eulerAngles = new Vector3(0, 180, 0);
+        if (Input.GetKeyDown(KeyCode.D)) TurnRight();
+        if (Input.GetKeyDown(KeyCode.A)) TurnLeft();
     }
 
     //固定更新事件：每禎0.002秒
     private void FixedUpdate()
     {
         //Debug.Log(Input.GetAxis("Horizontal"));
+        Walk();
+    }
+    /// <summary>
+    /// 走路
+    /// </summary>
+    void Walk()
+    {
         r2d.AddForce(new Vector2(speed * (Input.GetAxis("Horizontal")), 0));
+    }
+    /// <summary>
+    /// 向右
+    /// </summary>
+    void TurnRight()
+    {
+        tra.eulerAngles = new Vector3(0, 0, 0);
+    }
+    /// <summary>
+    /// 向左
+    /// </summary>
+    void TurnLeft()
+    {
+        tra.eulerAngles = new Vector3(0, 180, 0);
     }
 }
