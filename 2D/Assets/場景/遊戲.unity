@@ -1042,7 +1042,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1074,8 +1074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7e418bf765cc7448be84011e7f5e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  jump: 2.5
+  speed: 150
+  jump: 300
   foxName: "\u72D0\u72F8"
   pass: 0
 --- !u!1 &1685565214

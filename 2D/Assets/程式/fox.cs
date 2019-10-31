@@ -25,15 +25,17 @@ public class fox : MonoBehaviour
     //更新事件：每秒約執行60次
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D)) TurnRight();
-        if (Input.GetKeyDown(KeyCode.A)) TurnLeft();
+        if (Input.GetKeyDown(KeyCode.D)) Turn(0);
+        if (Input.GetKeyDown(KeyCode.A)) Turn(180);
     }
 
     //固定更新事件：每禎0.002秒
     private void FixedUpdate()
     {
         //Debug.Log(Input.GetAxis("Horizontal"));
-        Walk();
+
+        Walk();   //呼叫方法
+        Jump();
     }
     /// <summary>
     /// 走路
@@ -42,18 +44,17 @@ public class fox : MonoBehaviour
     {
         r2d.AddForce(new Vector2(speed * (Input.GetAxis("Horizontal")), 0));
     }
-    /// <summary>
-    /// 向右
-    /// </summary>
-    void TurnRight()
+
+    void Jump()
     {
-        tra.eulerAngles = new Vector3(0, 0, 0);
+        r2d.AddForce(new Vector2(0, jump * (Input.GetAxis("Jump"))));
     }
     /// <summary>
-    /// 向左
+    /// 轉向
     /// </summary>
-    void TurnLeft()
+    /// <param name="direction">控制方向，左：180，右：0 </param>
+    void Turn(int direction)
     {
-        tra.eulerAngles = new Vector3(0, 180, 0);
+        tra.eulerAngles = new Vector3(0, direction, 0);
     }
 }
