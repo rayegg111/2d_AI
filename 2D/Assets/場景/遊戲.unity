@@ -1074,10 +1074,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7e418bf765cc7448be84011e7f5e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
-  jump: 300
+  speed: 100
+  jump: 1500
   foxName: "\u72D0\u72F8"
   pass: 0
+  isGround: 0
 --- !u!1 &1685565214
 GameObject:
   m_ObjectHideFlags: 0

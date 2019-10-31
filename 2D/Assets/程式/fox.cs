@@ -9,6 +9,7 @@ public class fox : MonoBehaviour
     public float jump = 2.5f;               // 浮點數
     public string foxName = "狐狸";         // 字串
     public bool pass = false;               // 布林值 - true/false
+    public bool isGround = false;
 
     private Rigidbody2D r2d;
     private Transform tra;
@@ -37,6 +38,13 @@ public class fox : MonoBehaviour
         Walk();   //呼叫方法
         Jump();
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGround = true;
+        Debug.Log("碰到" + collision.gameObject);
+    }
+
     /// <summary>
     /// 走路
     /// </summary>
@@ -44,10 +52,16 @@ public class fox : MonoBehaviour
     {
         r2d.AddForce(new Vector2(speed * (Input.GetAxis("Horizontal")), 0));
     }
-
+    /// <summary>
+    /// 跳躍
+    /// </summary>
     void Jump()
     {
-        r2d.AddForce(new Vector2(0, jump * (Input.GetAxis("Jump"))));
+        if (Input.GetKeyDown(KeyCode.Space) && isGround == true) 
+        {
+            isGround = false;
+            r2d.AddForce(new Vector2(0, jump));
+        }
     }
     /// <summary>
     /// 轉向
