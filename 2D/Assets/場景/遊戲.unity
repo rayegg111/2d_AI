@@ -125,12 +125,12 @@ GameObject:
   - component: {fileID: 71869793}
   - component: {fileID: 71869792}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: "\u5C0D\u8A71\u6846"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &71869792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,13 +199,14 @@ RectTransform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 424027004}
+  - {fileID: 545394012}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.92, y: -1.29}
-  m_SizeDelta: {x: 500, y: 300}
+  m_AnchoredPosition: {x: 2.92, y: -1.088}
+  m_SizeDelta: {x: 500, y: 259.616}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &424027003
 GameObject:
@@ -218,7 +219,7 @@ GameObject:
   - component: {fileID: 424027006}
   - component: {fileID: 424027005}
   m_Layer: 5
-  m_Name: Image
+  m_Name: "\u5E95\u5716"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6627451}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.41960785}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -351,6 +352,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545394011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545394012}
+  - component: {fileID: 545394014}
+  - component: {fileID: 545394013}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &545394012
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545394011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 71869795}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.55, y: 1.2}
+  m_SizeDelta: {x: 448.4, y: 255.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &545394013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545394011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: eb484da28a9c9c14a8c75cc8a3d8d5bc, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &545394014
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545394011}
+  m_CullTransparentMesh: 0
 --- !u!1 &579104897
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,8 +438,9 @@ GameObject:
   - component: {fileID: 579104899}
   - component: {fileID: 579104898}
   - component: {fileID: 579104901}
+  - component: {fileID: 579104902}
   m_Layer: 0
-  m_Name: gem-5
+  m_Name: "\u5BF6\u77F3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -461,6 +538,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.014035368}
   m_Size: {x: 0.121929266, y: 0.12504826}
   m_Direction: 0
+--- !u!114 &579104902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579104897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9850406ee078b4695ce2c48fce0589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myColor: "\u9ED1\u8272"
 --- !u!1 &655620305
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +564,7 @@ GameObject:
   - component: {fileID: 655620309}
   - component: {fileID: 655620311}
   m_Layer: 0
-  m_Name: frog-idle-4
+  m_Name: "\u9752\u86D9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,7 +666,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!70 &655620310
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -587,7 +676,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.012038315, y: -0.007051444}
@@ -604,13 +693,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4eafe339b9db714c9a4487a3a7bd32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  star: "\u563F\uFF0C\u5E6B\u6211\u627E5\u9846\u947D\u77F3\u55CE?"
-  not_complete: "\u4F60\u9084\u6C92\u627E\u52305\u9846\u947D\u77F3\uFF0C\u7B49\u4F60\u627E\u5230\u518D\u4F86\u627E\u6211\u5427"
+  _state: 0
+  star: "\u80FD\u62FF5\u9846\u947D\u77F3\u7D66\u6211\u55CE?"
+  not_complete: "\u627E\u5B8C\u518D\u904E\u4F86\u5427"
   complete: "\u8B1D\u4E86\u8001\u5144"
   talkspeed: 1
   mission_complete: 0
   count_player: 0
   finish: 5
+  objcan: {fileID: 71869791}
+  textSay: {fileID: 545394013}
 --- !u!1 &700439835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1277,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1262997412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.07, y: -2.962, z: 0}
+  m_LocalPosition: {x: -5.43, y: -2.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
