@@ -546,10 +546,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 579104897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9850406ee078b4695ce2c48fce0589, type: 3}
+  m_Script: {fileID: 11500000, guid: 8959bf52883ca4a4888fe01cd353fcd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myColor: "\u9ED1\u8272"
+  say: "\u9019\u662F\u7DF4\u7FD2\u6E2C\u8A66"
 --- !u!1 &655620305
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 0
   star: "\u80FD\u62FF5\u9846\u947D\u77F3\u7D66\u6211\u55CE?"
-  not_complete: "\u627E\u5B8C\u518D\u904E\u4F86\u5427"
+  notcomplete: "\u9084\u6C92\u627E\u52305\u9846\u947D\u77F3\uFF0C\u7B49\u5168\u627E\u5230\u518D\u4F86\u627E\u6211\u5427"
   complete: "\u8B1D\u4E86\u8001\u5144"
   talkspeed: 1
   mission_complete: 0
@@ -1258,7 +1258,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c8a742c1f2ebb43b9afe34a47304c051, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

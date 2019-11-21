@@ -18,7 +18,7 @@ public class frog : MonoBehaviour
 
     [Header ("任務對話")]
     public string star = "嘿，幫我找5顆鑽石嗎?";
-    public string not_complete = "你還沒找到5顆鑽石，等你找到再來找我吧";
+    public string notcomplete = "你還沒找到5顆鑽石，等你找到再來找我吧";
     public string complete = "謝了老兄";
     [Header ("對話速度")]
     public float talkspeed = 1f;
@@ -51,13 +51,18 @@ public class frog : MonoBehaviour
     {
         objcan.SetActive(true);
         textSay.text = star;
+
+        // 判斷式(狀態)
         switch (_state)
         {
-            case star:
-                print("玩家輸入的是黑色");
+            case state.star:
+                textSay.text = star;            // 開始對話
                 break;
-            case notcomplete:
-                print("玩家輸入的是紅色");
+            case state.notComplete:
+                textSay.text = notcomplete;     // 未完成對話
+                break;
+            case state.complete:
+                textSay.text = complete;        // 完成對話
                 break;
         }
     }
