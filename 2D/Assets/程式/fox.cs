@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class fox : MonoBehaviour
 {
@@ -10,6 +10,8 @@ public class fox : MonoBehaviour
     public string foxName = "狐狸";         // 字串
     public bool pass = false;               // 布林值 - true/false
     public bool isGround = false;
+
+    public UnityEvent onEat;
 
     private Rigidbody2D r2d;
     private Transform tra;
@@ -43,6 +45,15 @@ public class fox : MonoBehaviour
     {
         isGround = true;
         Debug.Log("碰到" + collision.gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "鑽石")
+        {
+            Destroy(collision.gameObject);
+            onEat.Invoke();
+        }
     }
 
     /// <summary>
