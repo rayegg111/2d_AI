@@ -10,6 +10,7 @@ public class fox : MonoBehaviour
     public string foxName = "狐狸";         // 字串
     public bool pass = false;               // 布林值 - true/false
     public bool isGround = false;
+    public float hp = 100;
 
     public UnityEvent onEat;
 
@@ -81,5 +82,10 @@ public class fox : MonoBehaviour
     void Turn(int direction)
     {
         tra.eulerAngles = new Vector3(0, direction, 0);
+    }
+
+    public void Damage(float damage)
+    {
+        hp -= damage;
     }
 }
