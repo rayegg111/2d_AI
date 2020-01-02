@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class fox : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class fox : MonoBehaviour
     private Rigidbody2D r2d;
     private Transform tra;
 
+    public Image hpBar;
+    private float maxHP;
+
+    public GameObject END;
+
     // 事件：在特定時間點會以指定頻率執行的方法
     // 開始事件：遊戲開始時執行一次
     private void Start()
@@ -24,6 +30,8 @@ public class fox : MonoBehaviour
         // 泛型 <T>
         r2d = GetComponent<Rigidbody2D>();
         tra = GetComponent<Transform>();
+
+        maxHP = hp;
     }
 
     //更新事件：每秒約執行60次
@@ -83,9 +91,22 @@ public class fox : MonoBehaviour
     {
         tra.eulerAngles = new Vector3(0, direction, 0);
     }
-
+    /// <summary>
+    /// 傷害
+    /// </summary>
+    /// <param name="damage"></param>
     public void Damage(float damage)
     {
         hp -= damage;
+        hpBar.fillAmount = hp / maxHP;
+        
+        //死亡
+        if (hp <= 0)          
+        {
+            END.SetActive(true);
+
+            Destroy(this);          //摧毀腳本
+        }  
+        
     }
 }

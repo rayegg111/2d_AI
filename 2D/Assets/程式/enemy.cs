@@ -5,7 +5,7 @@ public class enemy : MonoBehaviour
     [Header("速度")]
     public float speed = 5f;
     [Header("傷害")]
-    public int damage = 10;
+    public int damage = 50;
 
     private Rigidbody2D r2d;
     public Transform checkpoint;
@@ -36,6 +36,8 @@ public class enemy : MonoBehaviour
         if (collision.gameObject.name == "狐狸")
         {
             collision.gameObject.GetComponent<fox>().Damage(damage);
+
+            print("123");
         }
     }
 
